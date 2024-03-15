@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leof/Screens/Login_Screen.dart';
+import 'package:leof/Screens/navigation_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -68,7 +69,12 @@ class SignupScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NavigatorScreen()));
+                },
                 child: Container(
                   height: 40,
                   width: 358,
