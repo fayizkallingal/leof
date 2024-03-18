@@ -14,49 +14,49 @@ class SignupScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('images/img16.gif'),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.person),
                       hintText: 'Enter Name'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.phone),
                       hintText: 'Enter Number'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.email),
                       hintText: 'Enter Email'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: Icon(Icons.remove_red_eye),
@@ -65,7 +65,7 @@ class SignupScreen extends StatelessWidget {
                   obscureText: true,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               InkWell(
@@ -73,16 +73,16 @@ class SignupScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => NavigatorScreen()));
+                          builder: (context) => const NavigatorScreen()));
                 },
                 child: Container(
                   height: 40,
                   width: 358,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 46, 184, 133),
+                    color: const Color.fromARGB(255, 46, 184, 133),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Create Account',
                       style: TextStyle(
@@ -98,7 +98,7 @@ class SignupScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     "Already Have an Account?",
                     style: TextStyle(
                       fontSize: 12,
@@ -109,11 +109,11 @@ class SignupScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginScreen(),
+                            builder: (context) => const LoginScreen(),
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Log in',
                         style: TextStyle(color: Colors.blue),
                       )),

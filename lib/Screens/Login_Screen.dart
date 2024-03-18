@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:leof/Screens/Signup_Screen.dart';
-import 'package:leof/Screens/bottomScreens/Home_Screen.dart';
 import 'package:leof/Screens/navigation_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -15,25 +14,25 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('images/img16.gif'),
-              SizedBox(
+              const SizedBox(
                 height: 35,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.email),
                       hintText: 'Email'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.only(right: 16.0, left: 17.0),
+                padding: const EdgeInsets.only(right: 16.0, left: 17.0),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: Icon(Icons.remove_red_eye),
@@ -46,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Forgot password',
                     style: TextStyle(
                       color: Colors.blue,
@@ -54,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
               InkWell(
@@ -62,17 +61,17 @@ class LoginScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NavigatorScreen(),
+                        builder: (context) => const NavigatorScreen(),
                       ));
                 },
                 child: Container(
                   height: 40,
                   width: 358,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 46, 184, 133),
+                    color: const Color.fromARGB(255, 46, 184, 133),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'LOG IN',
                       style: TextStyle(
@@ -88,7 +87,7 @@ class LoginScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     "Don't Have an Account?",
                     style: TextStyle(
                       fontSize: 12,
@@ -99,9 +98,9 @@ class LoginScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignupScreen()));
+                                builder: (context) => const SignupScreen()));
                       },
-                      child: Text(
+                      child: const Text(
                         'Sign Up',
                         style: TextStyle(color: Colors.blue),
                       )),

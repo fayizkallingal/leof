@@ -45,21 +45,21 @@ class BoardingScreen extends StatelessWidget {
       showSkipButton: false,
       showDoneButton: true,
       showBackButton: true,
-      back: Text(
+      back: const Text(
         "back",
         style: TextStyle(
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 48, 255, 86),
         ),
       ),
-      next: Text(
+      next: const Text(
         "next",
         style: TextStyle(
           fontWeight: FontWeight.w600,
           color: Color.fromARGB(255, 48, 255, 86),
         ),
       ),
-      done: Text(
+      done: const Text(
         "Done",
         style: TextStyle(
           fontWeight: FontWeight.w600,
@@ -67,12 +67,12 @@ class BoardingScreen extends StatelessWidget {
         ),
       ),
       onDone: () {
-        Navigator.push(
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => LoginScreen()));
       },
       onSkip: () {},
       dotsDecorator: DotsDecorator(
-        activeSize: Size(20, 10),
+        activeSize: const Size(20, 10),
         activeColor: Colors.green,
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),

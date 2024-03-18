@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:leof/Screens/boarding_screen.dart';
-import 'package:leof/Screens/bottomScreens/Home_Screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,8 +14,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
-        () => Navigator.push(
+        const Duration(seconds: 3),
+        () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
               builder: (context) => BoardingScreen(),
@@ -30,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
             image: AssetImage("images/img4.jpg"),
@@ -38,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
             opacity: 0.4,
           ),
         ),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(

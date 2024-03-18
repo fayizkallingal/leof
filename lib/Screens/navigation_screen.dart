@@ -17,10 +17,10 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
   int pageIndex = 0;
 
   List<Widget> pages = [
-    HomeScreen(),
-    CartScreen(),
-    FavourScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const CartScreen(),
+    const FavourScreen(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
         floatingActionButtonLocation:
             FloatingActionButtonLocation.miniCenterDocked,
         bottomNavigationBar: AnimatedBottomNavigationBar(
-          icons: [
+          icons: const [
             CupertinoIcons.home,
             CupertinoIcons.cart,
             CupertinoIcons.heart,
@@ -49,7 +49,7 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
           ],
           activeIndex: pageIndex,
           gapLocation: GapLocation.center,
-          activeColor: Color.fromARGB(255, 21, 207, 27),
+          activeColor: const Color.fromARGB(255, 21, 207, 27),
           iconSize: 35,
           notchSmoothness: NotchSmoothness.softEdge,
           inactiveColor: Colors.black.withOpacity(0.6),

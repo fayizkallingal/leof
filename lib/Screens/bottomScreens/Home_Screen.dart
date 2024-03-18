@@ -25,10 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List prices = [
-    "\$300",
-    "\$400",
-    "\$500",
-    "\$200",
+    "300",
+    "400",
+    "500",
+    "200",
   ];
 
   List reviews = [
@@ -51,13 +51,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     height: 50,
                     width: MediaQuery.of(context).size.width / 1.5,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black12.withOpacity(0.05),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
                             blurRadius: 1,
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ]),
                     child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(
                               Icons.search,
                               color: Color.fromARGB(255, 21, 207, 27),
@@ -74,43 +74,42 @@ class _HomeScreenState extends State<HomeScreen> {
                             hintText: 'Find your product')),
                   ),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     height: 50,
                     width: MediaQuery.of(context).size.width / 6,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black12.withOpacity(0.05),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
                             blurRadius: 1,
                             spreadRadius: 1,
                           ),
                         ]),
-                    child: Icon(
+                    child: const Icon(
                       Icons.notifications,
                       color: Color.fromARGB(255, 21, 207, 27),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 13,
               ),
               Container(
                 height: 200,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.yellow,
                   borderRadius: BorderRadius.circular(18),
-                  image: DecorationImage(
+                  image: const DecorationImage(
                       image: AssetImage('images/img15.gif'), fit: BoxFit.fill),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 13,
               ),
-              Container(
+              SizedBox(
                 height: 50,
                 child: ListView.builder(
                     shrinkWrap: true,
@@ -120,15 +119,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       return FittedBox(
                         child: Container(
                           height: 40,
-                          margin: EdgeInsets.all(8),
-                          padding: EdgeInsets.only(left: 15, right: 15),
+                          margin: const EdgeInsets.all(8),
+                          padding: const EdgeInsets.only(left: 15, right: 15),
                           decoration: BoxDecoration(
                               color: Colors.black.withOpacity(0.05),
                               borderRadius: BorderRadius.circular(20)),
                           child: Center(
                             child: Text(
                               tabs[index],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.black54,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16,
@@ -139,10 +138,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Container(
+              SizedBox(
                 height: 176,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -151,13 +150,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemBuilder: (context, index) {
                       return Container(
                         width: 293,
-                        margin: EdgeInsets.only(right: 15),
+                        margin: const EdgeInsets.only(right: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.only(right: 10),
+                              padding: const EdgeInsets.only(right: 10),
                               child: Stack(
                                 children: [
                                   InkWell(
@@ -181,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(20),
                                       ),
-                                      child: Center(
+                                      child: const Center(
                                         child: Icon(
                                           Icons.favorite,
                                           color: Colors.red,
@@ -193,61 +192,59 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                             ),
-                            Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    productname[index],
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  productname[index],
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 120,
+                                  child: Text(
+                                    "Chic fashion is all about appearing classy and fancy and paying attention to details. It is a blend between the trendy ones and the classic wear,",
+                                    maxLines: 6,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.star,
+                                      color: Colors.yellow,
+                                      size: 20,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 120,
-                                    child: Text(
-                                      "Chic fashion is all about appearing classy and fancy and paying attention to details. It is a blend between the trendy ones and the classic wear,",
-                                      maxLines: 6,
-                                      overflow: TextOverflow.ellipsis,
+                                    Text(
+                                      '(' + reviews[index] + ')',
+                                      style: const TextStyle(fontSize: 15),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    height: 2,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        Icons.star,
-                                        color: Colors.yellow,
-                                        size: 20,
+                                    Text(
+                                      '${prices[index]}\u20B9',
+                                      style: const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.green,
                                       ),
-                                      Text(
-                                        '(' + reviews[index] + ')',
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      Text(
-                                        prices[index],
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       );
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Trending Products',
@@ -257,90 +254,88 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               GridView.builder(
                   itemCount: productname.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 20,
                     childAspectRatio: 0.5,
                   ),
                   itemBuilder: (context, index) {
-                    return Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(right: 10),
-                            child: Stack(
-                              children: [
-                                InkWell(
-                                    onTap: () {},
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(
-                                        imagelist[index],
-                                        fit: BoxFit.cover,
-                                        width: 185,
-                                        height: 290,
-                                      ),
-                                    )),
-                                Positioned(
-                                  right: 8,
-                                  top: 5,
-                                  child: Container(
-                                    height: 23,
-                                    width: 23,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(20),
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Stack(
+                            children: [
+                              InkWell(
+                                  onTap: () {},
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Image.asset(
+                                      imagelist[index],
+                                      fit: BoxFit.cover,
+                                      width: 185,
+                                      height: 290,
                                     ),
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.favorite,
-                                        color: Colors.red,
-                                        size: 20,
-                                      ),
+                                  )),
+                              Positioned(
+                                right: 8,
+                                top: 5,
+                                child: Container(
+                                  height: 23,
+                                  width: 23,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.favorite,
+                                      color: Colors.red,
+                                      size: 20,
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            productname[index],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.yellow,
-                                size: 22,
-                              ),
-                              Text(
-                                '(' + reviews[index] + ')',
-                              ),
-                              Text(
-                                prices[index],
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green,
                                 ),
                               ),
                             ],
                           ),
-                        ],
-                      ),
+                        ),
+                        Text(
+                          productname[index],
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                              size: 22,
+                            ),
+                            Text(
+                              '(' + reviews[index] + ')',
+                            ),
+                            Text(
+                              '${prices[index]}\u20B9',
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     );
                   })
             ],
