@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leof/Screens/bottomScreens/product_Screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -160,7 +161,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Stack(
                                 children: [
                                   InkWell(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ProductScreen()));
+                                      },
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(8),
                                         child: Image.asset(
@@ -276,7 +283,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Stack(
                             children: [
                               InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ProductScreen()));
+                                  },
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8),
                                     child: Image.asset(
